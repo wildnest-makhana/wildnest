@@ -46,6 +46,26 @@
         </div>
       </div>
     </section>
+    <style>/* 🎆 Happy Diwali Animation */
+    .diwali-message {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ff9933;
+      text-shadow: 0 0 10px #ff9933, 0 0 20px #ffcc33, 0 0 40px #ff6600;
+      animation: glow 2s ease-in-out infinite alternate;
+      margin-top: 40px;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff9933, 0 0 20px #ffcc33, 0 0 40px #ff6600;
+      }
+      to {
+        text-shadow: 0 0 20px #ff6600, 0 0 30px #ffcc33, 0 0 50px #ff3300;
+      }
+    }
+      </style>
+
 
     <section id="products" class="products container">
       <h2>Products</h2>
@@ -136,4 +156,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
