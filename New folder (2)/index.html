@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WildNest — Crafted by Nature</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="WildNest — natural roasted makhana and handcrafted snacks. Launching soon." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Clicking logo goes to Instagram as requested -->
+      <a class="brand" href="https://www.instagram.com/wildnnest/" target="_blank" rel="noopener">
+        <img src="ooo.jpeg" alt="WildNest Logo" class="logo" />
+      </a>
+
+      <nav class="nav">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="cart-btn" class="cart-btn" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>WildNest</h1>
+          <p class="tagline">Handcrafted natural snacks — roasted with love.</p>
+
+          <div id="countdown" class="countdown">
+            <div class="time">
+              <div class="num" id="days">0</div>
+              <div class="label">Days</div>
+            </div>
+            <div class="time">
+              <div class="num" id="hours">00</div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="time">
+              <div class="num" id="minutes">00</div>
+              <div class="label">Minutes</div>
+            </div>
+            <div class="time">
+              <div class="num" id="seconds">00</div>
+              <div class="label">Seconds</div>
+            </div>
+          </div>
+
+          <div id="pre-launch-cta" class="pre-launch-cta">
+            <button id="notify-btn" class="btn outline">Notify Me (WhatsApp)</button>
+          </div>
+
+          <div id="launch-cta" class="launch-cta hidden">
+            <div class="available">🎉 Now Available! 🎉</div>
+            <a id="whatsapp-order" class="btn primary" href="#" target="_blank">Chat / Order on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="image-30.png" alt="WildNest product" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h2>Products</h2>
+      <p class="muted">Click <em>Add to Cart</em> to prepare an order — checkout opens WhatsApp with your order summary.</p>
+
+      <div class="product-grid">
+        <!-- Product card 1 -->
+        <article class="product-card" data-id="wild-001" data-name="Roasted Makhana - Classic" data-price="159">
+          <img src="image-30.png" alt="Roasted Makhana Classic" />
+          <h3>Roasted Makhana — Classic</h3>
+          <p class="price">₹159 / pack</p>
+          <p class="desc">Lightly salted, crunchy roasted makhana made from natural ingredients.</p>
+          <div class="card-actions">
+            <button class="btn add-to-cart">Add to Cart</button>
+            <button class="btn outline notify-whatsapp">Notify (WhatsApp)</button>
+          </div>
+        </article>
+
+        <!-- Product card 2 -->
+        <article class="product-card" data-id="wild-002" data-name="Festival Gift Mix" data-price="299">
+          <img src="1000158241_edited.jpeg" alt="Festival Gift Mix" />
+          <h3>Festival Gift Mix</h3>
+          <p class="price">₹299 / box</p>
+          <p class="desc">A curated festive box of WildNest favorites — perfect to gift.</p>
+          <div class="card-actions">
+            <button class="btn add-to-cart">Add to Cart</button>
+            <button class="btn outline notify-whatsapp">Notify (WhatsApp)</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About WildNest</h2>
+      <p>WildNest is a small-batch, nature-inspired snack company. We roast with minimal oil, real ingredients, and zero nasties.</p>
+      <ul>
+        <li>Natural ingredients</li>
+        <li>Small batch roasting</li>
+        <li>Hand-packed with care</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact & Inquiries</h2>
+      <p>For collaborations, wholesale, or queries — ping us on WhatsApp or message on Instagram.</p>
+      <div class="contact-actions">
+        <a class="btn outline" href="mailto:wildnest@gmail.com">Email Us</a>
+        <a class="btn" href="https://wa.me/917295857885?text=Hello%20WildNest%20team%2C%20I%20have%20a%20question." target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer / Modal -->
+  <div id="cart-drawer" class="cart-drawer hidden" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="close">&times;</button>
+    </div>
+    <div id="cart-contents" class="cart-contents">
+      <!-- items injected by JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: ₹<span id="cart-total">0</span></div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn outline">Clear</button>
+        <button id="checkout-btn" class="btn primary" disabled>Checkout via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="social">
+        <p>Follow us</p>
+        <a class="social-link" href="https://www.instagram.com/wildnnest/" target="_blank" rel="noopener">
+          <!-- Instagram image (size controlled in CSS) -->
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="insta-icon" />
+        </a>
+      </div>
+
+      <p class="muted">© 2025 WildNest — Crafted by Nature</p>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
